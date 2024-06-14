@@ -1,0 +1,26 @@
+.UserProfile {
+     box-shadow: 0 0 10px rgba(0, 64, 255, 0.5); /* Horizontal offset, Vertical offset, Blur radius, Color */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  padding: 20px; /* Optional: adds padding inside the box */
+}
+
+.backbtn {
+    margin: 10px;
+    border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.backbtn:hover {
+  border-color: #646cff;
+}
+.backbtn:focus,
+.backbtn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

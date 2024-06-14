@@ -1,15 +1,26 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./App.css";
-import ContactList, { dummyContacts } from "./components/ContactList";
+import ContactList from "./components/ContactList";
+import SelectedContact from "./components/SelectedContact";
 
 function App() {
-  const [contacts, setContacts] = useState(dummyContacts);
+  const [selectedContactId, setSelectedContactId] = useState(null)
   
   return (
     <>
-      <ContactList />
+      {selectedContactId ? (
+        <SelectedContact
+          selectedContactId={selectedContactId}
+          setSelectedContactId={setSelectedContactId}
+        />
+      ) : (
+        <ContactList setSelectedContactId={setSelectedContactId} />
+      )}
     </>
   );
 }
 
 export default App;
+
+
